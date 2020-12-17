@@ -1,3 +1,3 @@
 # MontRusas-Chart
 
-Empleo de chart
+Uso de Chart.js 
