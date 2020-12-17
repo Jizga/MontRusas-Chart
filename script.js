@@ -7,6 +7,8 @@ Chart.defaults.global.defaultFontColor = "white";
 fetch("https://coasters-api.herokuapp.com/country/Spain")
   .then((Response) => Response.json())
   .then((data) => printChart(data));
+  
+//-----
 
 function printChart(coasters) {
   console.log("Estas son las Montañas Rusas:", coasters);
