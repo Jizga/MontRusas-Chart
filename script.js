@@ -19,6 +19,8 @@ function printChart(coasters) {
   let tarantula = coasters[3];
 
   speedChart(superman, batman, vertigo, abismo, shambala, tarantula);
+  lengthChart(superman, batman, vertigo, abismo, shambala, tarantula);
+  heightChart(superman, batman, vertigo, abismo, shambala, tarantula);
 }
 
 function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
@@ -46,7 +48,7 @@ function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
         borderColor: [
           "rgb(116, 72, 194, 1)",
           "rgb(33, 192, 215, 1)",
-          "rg(217, 158, 43, 1)",
+          "rgb(217, 158, 43, 1)",
           "rgb(205, 58, 129, 1)",
           "rgb(156, 153, 204, 1)",
           "rgb(225, 78, 202, 1)",
@@ -54,7 +56,7 @@ function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
         backgroundColor: [
           "rgb(116, 72, 194, .2)",
           "rgb(33, 192, 215, .2)",
-          "rg(217, 158, 43, .2)",
+          "rgb(217, 158, 43, .2)",
           "rgb(205, 58, 129, .2)",
           "rgb(156, 153, 204, .2)",
           "rgb(225, 78, 202, .2)",
@@ -64,4 +66,100 @@ function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
   };
 
   new Chart("chart1", { type: "bar", data });
+}
+
+function lengthChart(superman, batman, vertigo, abismo, shambala, tarantula) {
+  let data = {
+    labels: [
+      "Superman",
+      "Batman",
+      "Vértigo",
+      "Abismo",
+      "Shambala",
+      "Tarántula",
+    ],
+    datasets: [
+      {
+        data: [
+          superman.length,
+          batman.length,
+          vertigo.length,
+          abismo.length,
+          shambala.length,
+          tarantula.length,
+        ],
+        
+        borderWidth: 1,
+        borderColor: [
+          "rgb(116, 72, 194, 1)",
+          "rgb(33, 192, 215, 1)",
+          "rgb(217, 158, 43, 1)",
+          "rgb(205, 58, 129, 1)",
+          "rgb(156, 153, 204, 1)",
+          "rgb(225, 78, 202, 1)",
+        ],
+        backgroundColor: [
+          "rgb(116, 72, 194, .2)",
+          "rgb(33, 192, 215, .2)",
+          "rgb(217, 158, 43, .2)",
+          "rgb(205, 58, 129, .2)",
+          "rgb(156, 153, 204, .2)",
+          "rgb(225, 78, 202, .2)",
+        ],
+      },
+    ],
+  };
+
+  let options = {
+    legend: {
+      position: "left",
+    },
+  };
+
+  new Chart("chart2", { type: "doughnut", data, options });
+}
+
+function heightChart(superman, batman, vertigo, abismo, shambala, tarantula) {
+  let data = {
+    labels: [
+      "Superman",
+      "Batman",
+      "Vértigo",
+      "Abismo",
+      "Shambala",
+      "Tarántula",
+    ],
+    datasets: [
+      {
+        data: [
+          superman.height,
+          batman.height,
+          vertigo.height,
+          abismo.height,
+          shambala.height,
+          tarantula.height,
+        ],
+        label: "km/h",
+        borderWidth: 1,
+        borderColor: [
+          "rgb(116, 72, 194, 1)",
+          "rgb(33, 192, 215, 1)",
+          "rgb(217, 158, 43, 1)",
+          "rgb(205, 58, 129, 1)",
+          "rgb(156, 153, 204, 1)",
+          "rgb(225, 78, 202, 1)",
+        ],
+        backgroundColor: [
+          "rgb(116, 72, 194, .2)",
+          "rgb(33, 192, 215, .2)",
+          "rgb(217, 158, 43, .2)",
+          "rgb(205, 58, 129, .2)",
+          "rgb(156, 153, 204, .2)",
+          "rgb(225, 78, 202, .2)",
+        ],
+      },
+    ],
+  };
+
+  new Chart("chart3", { type: "bar", data });
 }
