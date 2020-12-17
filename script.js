@@ -21,6 +21,7 @@ function printChart(coasters) {
   speedChart(superman, batman, vertigo, abismo, shambala, tarantula);
   lengthChart(superman, batman, vertigo, abismo, shambala, tarantula);
   heightChart(superman, batman, vertigo, abismo, shambala, tarantula);
+  heightSpeedChart(superman, batman, vertigo, abismo, shambala, tarantula);
 }
 
 function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
@@ -176,4 +177,80 @@ function heightChart(superman, batman, vertigo, abismo, shambala, tarantula) {
   };
 
   new Chart("chart3", { type: "radar", data, options });
+}
+
+// Dos charts en uno
+
+function heightSpeedChart(
+  superman,
+  batman,
+  vertigo,
+  abismo,
+  shambala,
+  tarantula
+) {
+  let data = {
+    labels: [
+      "Superman",
+      "Batman",
+      "Vértigo",
+      "Abismo",
+      "Shambala",
+      "Tarántula",
+    ],
+    datasets: [
+      {
+        data: [
+          superman.height,
+          batman.height,
+          vertigo.height,
+          abismo.height,
+          shambala.height,
+          tarantula.height,
+        ],
+        label: "metros",
+        borderWidth: 2,
+        borderColor: "rgba(200, 55, 415, 1)",
+        backgroundColor: "rgba(200, 55, 415, .2)",
+        type: "line",
+      },
+      {
+        data: [
+          superman.speed,
+          batman.speed,
+          vertigo.speed,
+          abismo.speed,
+          shambala.speed,
+          tarantula.speed,
+        ],
+        label: "km/h",
+        borderWidth: 1,
+        borderColor: [
+          "rgba(116, 72, 194, 1)",
+          "rgba(33, 192, 215, 1)",
+          "rgba(217, 158, 43, 1)",
+          "rgba(205, 58, 129, 1)",
+          "rgba(156, 153, 204, 1)",
+          "rgba(225, 78, 202, 1)",
+        ],
+        backgroundColor: [
+          "rgba(116, 72, 194, .2)",
+          "rgba(33, 192, 215, .2)",
+          "rgba(217, 158, 43, .2)",
+          "rgba(205, 58, 129, .2)",
+          "rgba(156, 153, 204, .2)",
+          "rgba(225, 78, 202, .2)",
+        ],
+      },
+    ],
+  };
+
+  let options = {
+    legend: {
+      display: false,
+    },
+    maintainAspectRatio: false,
+  };
+
+  new Chart("chart4", { type: "bar", data, options });
 }
