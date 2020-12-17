@@ -1,3 +1,7 @@
 # MontRusas-Chart
 
-Empleo de chart
+Uso de Chart.js 
+
+https://www.chartjs.org/
+
+https://cdnjs.com/libraries/Chart.js
