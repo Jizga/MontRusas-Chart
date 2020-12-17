@@ -7,7 +7,7 @@ Chart.defaults.global.defaultFontColor = "white";
 fetch("https://coasters-api.herokuapp.com/country/Spain")
   .then((Response) => Response.json())
   .then((data) => printChart(data));
-  
+
 //-----
 
 function printChart(coasters) {
@@ -26,16 +26,36 @@ function printChart(coasters) {
   heightSpeedChart(superman, batman, vertigo, abismo, shambala, tarantula);
 }
 
+const borderColor = [
+  "rgba(116, 72, 194, 1)",
+  "rgba(33, 192, 215, 1)",
+  "rgba(217, 158, 43, 1)",
+  "rgba(205, 58, 129, 1)",
+  "rgba(156, 153, 204, 1)",
+  "rgba(225, 78, 202, 1)",
+];
+
+const backgroundColor = [
+  "rgba(116, 72, 194, .2)",
+  "rgba(33, 192, 215, .2)",
+  "rgba(217, 158, 43, .2)",
+  "rgba(205, 58, 129, .2)",
+  "rgba(156, 153, 204, .2)",
+  "rgba(225, 78, 202, .2)",
+];
+
+const coastersNames = [
+  "Superman",
+  "Batman",
+  "Vértigo",
+  "Abismo",
+  "Shambala",
+  "Tarántula",
+];
+
 function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
   let data = {
-    labels: [
-      "Superman",
-      "Batman",
-      "Vértigo",
-      "Abismo",
-      "Shambala",
-      "Tarántula",
-    ],
+    labels: coastersNames,
     datasets: [
       {
         data: [
@@ -48,22 +68,8 @@ function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
         ],
         label: "km/h",
         borderWidth: 1,
-        borderColor: [
-          "rgba(116, 72, 194, 1)",
-          "rgba(33, 192, 215, 1)",
-          "rgba(217, 158, 43, 1)",
-          "rgba(205, 58, 129, 1)",
-          "rgba(156, 153, 204, 1)",
-          "rgba(225, 78, 202, 1)",
-        ],
-        backgroundColor: [
-          "rgba(116, 72, 194, .2)",
-          "rgba(33, 192, 215, .2)",
-          "rgba(217, 158, 43, .2)",
-          "rgba(205, 58, 129, .2)",
-          "rgba(156, 153, 204, .2)",
-          "rgba(225, 78, 202, .2)",
-        ],
+        borderColor,
+        backgroundColor,
       },
     ],
   };
@@ -73,14 +79,7 @@ function speedChart(superman, batman, vertigo, abismo, shambala, tarantula) {
 
 function lengthChart(superman, batman, vertigo, abismo, shambala, tarantula) {
   let data = {
-    labels: [
-      "Superman",
-      "Batman",
-      "Vértigo",
-      "Abismo",
-      "Shambala",
-      "Tarántula",
-    ],
+    labels: coastersNames,
     datasets: [
       {
         data: [
@@ -93,22 +92,8 @@ function lengthChart(superman, batman, vertigo, abismo, shambala, tarantula) {
         ],
         label: "metros",
         borderWidth: 1,
-        borderColor: [
-          "rgba(116, 72, 194, 1)",
-          "rgba(33, 192, 215, 1)",
-          "rgba(217, 158, 43, 1)",
-          "rgba(205, 58, 129, 1)",
-          "rgba(156, 153, 204, 1)",
-          "rgba(225, 78, 202, 1)",
-        ],
-        backgroundColor: [
-          "rgba(116, 72, 194, .2)",
-          "rgba(33, 192, 215, .2)",
-          "rgba(217, 158, 43, .2)",
-          "rgba(205, 58, 129, .2)",
-          "rgba(156, 153, 204, .2)",
-          "rgba(225, 78, 202, .2)",
-        ],
+        borderColor,
+        backgroundColor,
       },
     ],
   };
@@ -124,14 +109,7 @@ function lengthChart(superman, batman, vertigo, abismo, shambala, tarantula) {
 
 function heightChart(superman, batman, vertigo, abismo, shambala, tarantula) {
   let data = {
-    labels: [
-      "Superman",
-      "Batman",
-      "Vértigo",
-      "Abismo",
-      "Shambala",
-      "Tarántula",
-    ],
+    labels: coastersNames,
     datasets: [
       {
         data: [
@@ -144,22 +122,8 @@ function heightChart(superman, batman, vertigo, abismo, shambala, tarantula) {
         ],
         label: "metros",
         borderWidth: 1,
-        borderColor: [
-          "rgba(116, 72, 194, 1)",
-          "rgba(33, 192, 215, 1)",
-          "rgba(217, 158, 43, 1)",
-          "rgba(205, 58, 129, 1)",
-          "rgba(156, 153, 204, 1)",
-          "rgba(225, 78, 202, 1)",
-        ],
-        backgroundColor: [
-          "rgba(116, 72, 194, .2)",
-          "rgba(33, 192, 215, .2)",
-          "rgba(217, 158, 43, .2)",
-          "rgba(205, 58, 129, .2)",
-          "rgba(156, 153, 204, .2)",
-          "rgba(225, 78, 202, .2)",
-        ],
+        borderColor,
+        backgroundColor,
       },
     ],
   };
@@ -192,14 +156,7 @@ function heightSpeedChart(
   tarantula
 ) {
   let data = {
-    labels: [
-      "Superman",
-      "Batman",
-      "Vértigo",
-      "Abismo",
-      "Shambala",
-      "Tarántula",
-    ],
+    labels: coastersNames,
     datasets: [
       {
         data: [
@@ -227,22 +184,8 @@ function heightSpeedChart(
         ],
         label: "km/h",
         borderWidth: 1,
-        borderColor: [
-          "rgba(116, 72, 194, 1)",
-          "rgba(33, 192, 215, 1)",
-          "rgba(217, 158, 43, 1)",
-          "rgba(205, 58, 129, 1)",
-          "rgba(156, 153, 204, 1)",
-          "rgba(225, 78, 202, 1)",
-        ],
-        backgroundColor: [
-          "rgba(116, 72, 194, .2)",
-          "rgba(33, 192, 215, .2)",
-          "rgba(217, 158, 43, .2)",
-          "rgba(205, 58, 129, .2)",
-          "rgba(156, 153, 204, .2)",
-          "rgba(225, 78, 202, .2)",
-        ],
+        borderColor,
+        backgroundColor,
       },
     ],
   };
