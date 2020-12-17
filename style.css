@@ -16,8 +16,14 @@ h2 {
 }
 
 hr {
-    border-color: #7c7e80da;
+    border-color: #939393;
 }
+
+figure {
+    background-color: #242b42;
+    padding: 20px;
+}
+
 
 /* GRID */
 
