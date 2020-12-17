@@ -8,6 +8,10 @@ main {
   margin: 60px;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 h1 {
     font-weight: 200;
 }
