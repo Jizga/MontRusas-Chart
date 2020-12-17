@@ -7,3 +7,36 @@ body {
 main {
   margin: 60px;
 }
+
+h1 {
+    font-weight: 200;
+}
+h2 {
+    font-weight: 200;
+}
+
+hr {
+    border-color: #5f6061da;
+}
+
+/* GRID */
+
+.columns-container {
+    display: flex;
+}
+
+.one-half-column {
+    width: 50%;
+}
+
+.one-third-column  {
+    width: 33.33%;
+}
+
+.two-third-column {
+    width: 66.66%;
+}
+
+.one-full-column {
+    width: 100%;
+}
